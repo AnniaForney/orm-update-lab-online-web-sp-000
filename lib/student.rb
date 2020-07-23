@@ -60,7 +60,7 @@ end
 def self.find_by_name(name)
   sql = "SELECT * FROM students WHERE name = ?"
   result = DB[:conn].execute(sql, name)[0]
-  
+  return self.new_from_db
 end
 
 def update
