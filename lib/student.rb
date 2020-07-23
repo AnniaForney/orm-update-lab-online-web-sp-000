@@ -65,8 +65,8 @@ def self.find_by_name(name)
 end
 
 def update
-  sql = "UPDATE songs SET name = ?, album = ? WHERE name = ?"
-  DB[:conn].execute(sql, self.name, self.album, self.name)
+  sql = "UPDATE students SET id = ?, name = ? WHERE id = ?"
+  DB[:conn].execute(sql, self.id, self.name, self.id)
   end
 
 end
